@@ -21,20 +21,18 @@ const DateRangeWithEvents: React.FC<DateRangeWithEventsProps> = ({
   handleRemoveEvent,
   handleModal,
 }) => {
-  const start = new Date(quarterStartDate);
-  const end = new Date(quarterEndDate);
   const weekList: JSX.Element[] = [];
-  let currentWeek = new Date(start);
+  let currentWeek = new Date(quarterStartDate);
   let mergedWeeks = 0;
 
-  while (currentWeek <= end) {
+  while (currentWeek <= quarterEndDate) {
     const weekStartDate = new Date(currentWeek);
     weekStartDate.setHours(0, 0, 0, 0);
 
     const weekEndDate = new Date(weekStartDate);
     weekEndDate.setDate(weekEndDate.getDate() + 6);
 
-    if (weekStartDate <= (event.endDate ? event.endDate : start) && weekEndDate >= (event.startDate ? event.startDate : end)) {
+    if (weekStartDate <= (event.endDate ? event.endDate : quarterStartDate) && weekEndDate >= (event.startDate ? event.startDate : quarterEndDate)) {
       mergedWeeks += 1;
     } else {
       if (mergedWeeks > 0) {

@@ -9,12 +9,10 @@ const DateRangeWeeks: React.FC<DateRangeWeeksProps> = ({
   startDate,
   endDate,
 }) => {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
   const weeks: JSX.Element[] = [];
-  let currentDate = new Date(start);
+  let currentDate = new Date(startDate);
 
-  while (currentDate <= end) {
+  while (currentDate <= endDate) {
     const weekNumber = weeks.length + 1;
     const weekText = `Week ${weekNumber}`;
     weeks.push(<td key={weekNumber}>{weekText}</td>);

@@ -6,13 +6,11 @@ interface DateRangeMonthsProps {
 }
 
 const DateRangeMonths: React.FC<DateRangeMonthsProps> = ({ startDate }) => {
-  const startingDate = new Date(startDate);
   const numWeeks = 13; // Number of weeks to display in the quarter
-
   const weeks = [];
 
   for (let i = 0; i < numWeeks; i++) {
-    const weekStart = addDays(startingDate, i * 7);
+    const weekStart = addDays(startDate, i * 7);
     weeks.push(weekStart);
   }
 
