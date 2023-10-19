@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Year quarters in table, with add events functionality
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
