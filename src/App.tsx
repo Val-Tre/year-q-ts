@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./components/Button";
 import QuarterDataTable from "./components/QuarterDataTable";
 import QuarterDates from "./components/QuarterDates";
-import DialogModalAddEvent from "./components/DialogModalAddEvent";
+import DialogModalAddEditEvent from "./components/DialogModalAddEditEvent";
 import { TypeEvent } from "./components/types";
 
 import "./App.css";
@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className="App">
-      <DialogModalAddEvent
+      <DialogModalAddEditEvent
         quarterIndex={quarterIndex}
         quarterStartEndDates={quarterStartEndDates}
         handleModal={handleModal}

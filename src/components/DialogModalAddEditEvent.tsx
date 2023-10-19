@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-interface EventFormModalProps {
+interface DialogModalAddEditEventProps {
   quarterIndex: number;
   handleModal: (action: "open" | "close") => void;
   quarterStartEndDates: [Date, Date];
@@ -14,7 +14,7 @@ interface EventFormModalProps {
   handleAddEditEvent: (event: TypeEvent) => void;
 }
 
-const EventFormModal: React.FC<EventFormModalProps> = ({
+const DialogModalAddEditEvent: React.FC<DialogModalAddEditEventProps> = ({
   quarterIndex,
   handleModal,
   quarterStartEndDates,
@@ -96,4 +96,4 @@ const EventFormModal: React.FC<EventFormModalProps> = ({
   );
 };
 
-export default EventFormModal;
+export default DialogModalAddEditEvent;
