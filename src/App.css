@@ -1,0 +1,126 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+@media (max-width: 762px) {
+  #root {
+    padding: 20px;
+  }
+}
+
+.App {
+  text-align: center;
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  margin: 0 20px;
+}
+
+button.add-event {
+  margin-top: 20px;
+}
+
+button.submit {
+  display: inline-block;
+  margin: 10px auto 0;
+}
+
+button.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.visually-hidden {
+  opacity: 0;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+th, td {
+  z-index: 1;
+}
+
+td.active {
+  position: relative;
+  cursor: pointer;
+}
+
+td.active:hover {
+  z-index: 2;
+}
+
+.hover-modal {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #fff;
+  min-width: 200px;
+  color: black;
+  transform: translateX(-50%);
+}
+
+td.active:hover .hover-modal {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.hover-modal h3 {
+  margin: 0 0 5px;
+}
+
+ol li > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol li:hover {
+  transition: background 400ms ease;
+  background-color: #ccc;
+}
+
+ol li p {
+  margin: 0;
+}
+
+ol li div div {
+  display: inline-block;
+}
+
+dialog {
+  position: relative;
+  min-width: 250px;
+}
+
+form * {
+  display: block;
+}
+
+form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-top: 5px;
+}
